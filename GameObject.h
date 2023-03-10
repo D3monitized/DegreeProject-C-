@@ -2,24 +2,39 @@
 
 #include "List.h"
 
-namespace Engine 
+namespace Engine
 {
+
 	class GameObject {
 
 	public:
 
-		GameObject();
+		GameObject()
+		{
+		}
+		~GameObject()
+		{
+		}
 
-	public:
+		static void Init()
+		{
+			m_allGameObjects = List<GameObject>();
+		}
 
-		virtual void Awake();
-		virtual void Start();
-		virtual void Update();
+		static void Clear()
+		{
+			m_allGameObjects.~List(); 
+		}
+
+		virtual void Start()
+		{
+		}
+		virtual void Update()
+		{
+		}		
 
 	public:
 
 		static List<GameObject> m_allGameObjects;
-		GameObject* m_thisObject;
-
 	};
 }

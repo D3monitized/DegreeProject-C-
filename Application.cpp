@@ -4,16 +4,18 @@ namespace Engine
 {
 	Application::Application()
 	{
-
 	}
 
 	Application::~Application()
+	{
+	}
+
+	void Application::Start()
 	{
 
 	}
 
 	void Application::Run()
 	{
-		while (true); 
 	}
 }

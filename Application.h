@@ -8,7 +8,8 @@ namespace Engine
 		Application();
 		virtual ~Application();
 
-		void Run(); 
+		virtual void Start(); 
+		virtual void Run(); 
 	};
 
 	Application* CreateApplication(); 

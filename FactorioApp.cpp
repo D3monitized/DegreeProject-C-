@@ -1,20 +1,21 @@
-#include "Engine.h"
+#include "FactorioApp.h"
 
-class Factorio : public Engine::Application {
-
-public: 
-	Factorio()
-	{
-		
-	}
-	~Factorio()
-	{
-
-	}
-
-};
-
-Engine::Application* Engine::CreateApplication()
+Factorio::Factorio()
 {
-	return new Factorio(); 
+
+}
+
+Factorio::~Factorio()
+{
+
+}
+
+void Factorio::Start()
+{
+
+}
+
+void Factorio::Run()
+{
+
 }

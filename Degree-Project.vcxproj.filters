@@ -25,24 +25,24 @@
     <Filter Include="Source Files\Engine\Engine">
       <UniqueIdentifier>{c451e742-5d50-48a6-99b1-aefb3d7defdb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Engine\FeatureClasses">
+      <UniqueIdentifier>{c4406c97-4e75-4edf-9d33-a0db3d9438d9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
     <ClCompile Include="Application.cpp">
       <Filter>Source Files\Engine\Engine</Filter>
     </ClCompile>
     <ClCompile Include="FactorioApp.cpp">
       <Filter>Source Files\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
       <Filter>Source Files\Engine\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Source Files\Engine</Filter>
     </ClInclude>
     <ClInclude Include="EntryPoint.h">
       <Filter>Source Files\Engine\Engine</Filter>
@@ -51,7 +51,16 @@
       <Filter>Source Files\Engine\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Engine.h">
-      <Filter>Source Files\Engine</Filter>
+      <Filter>Source Files\Engine\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="FactorioApp.h">
+      <Filter>Source Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Source Files\Engine\FeatureClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Source Files\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
