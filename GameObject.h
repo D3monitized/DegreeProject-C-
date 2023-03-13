@@ -1,40 +1,40 @@
 #pragma once
 
-#include "List.h"
-
-namespace Engine
-{
-
+namespace Engine {
 	class GameObject {
 
-	public:
+	static std::set<GameObject*> _instances;
 
+	public:
 		GameObject()
 		{
+			_instances.insert(this);
+		}
+		GameObject(GameObject& other)
+		{
+			_instances.insert(this);
 		}
 		~GameObject()
 		{
-		}
-
-		static void Init()
-		{
-			m_allGameObjects = List<GameObject>();
-		}
-
-		static void Clear()
-		{
-			m_allGameObjects.~List(); 
+			_instances.erase(this);
 		}
 
 		virtual void Start()
 		{
+
 		}
-		virtual void Update()
+
+		virtual void Tick()
 		{
-		}		
+			
+		}
+
+		static const std::set<GameObject*>& GetInstances()
+		{
+			return _instances;
+		}
 
 	public:
-
-		static List<GameObject> m_allGameObjects;
+		std::string _Name;
 	};
 }
