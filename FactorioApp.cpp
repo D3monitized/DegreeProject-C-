@@ -16,7 +16,6 @@ Factorio::~Factorio()
 
 void Factorio::Start()
 {	
-
 	//Any GameObjects created at start should be created before this loop in order to utilize their start function
 	for (Engine::GameObject* go : Engine::GameObject::GetInstances()) 
 	{
