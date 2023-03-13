@@ -1,40 +1,33 @@
 #pragma once
+#include <iostream>
+#include <set>
+
+#include "SpriteRenderer.h"
 
 namespace Engine {
-	class GameObject {
 
+	class GameObject { //Abstract class not to be used as is 
 	static std::set<GameObject*> _instances;
-
 	public:
-		GameObject()
-		{
+		GameObject() {
 			_instances.insert(this);
 		}
-		GameObject(GameObject& other)
-		{
+		GameObject(GameObject& other) {
 			_instances.insert(this);
 		}
-		~GameObject()
-		{
+		~GameObject() {
 			_instances.erase(this);
 		}
 
-		virtual void Start()
-		{
+		virtual void Start() = 0;
+		virtual void Tick() = 0; 
 
-		}
-
-		virtual void Tick()
-		{
-			
-		}
-
-		static const std::set<GameObject*>& GetInstances()
-		{
+		static const std::set<GameObject*>& GetInstances() {
 			return _instances;
 		}
 
 	public:
 		std::string _Name;
+		SpriteRenderer* _spriteRenderer;
 	};
 }

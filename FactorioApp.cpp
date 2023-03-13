@@ -4,18 +4,25 @@
 
 std::set<Engine::GameObject*> Engine::GameObject::_instances; 
 
-Factorio::Factorio()
-{
+Factorio::Factorio() {
 	_window = new sf::RenderWindow(sf::VideoMode(400, 400), "Game Window");
 }
 
-Factorio::~Factorio()
-{
+Factorio::~Factorio() {
 	delete _window; 
 }
 
-void Factorio::Start()
-{	
+void Factorio::Start() {	
+
+	//TestObject* to = new TestObject(); 
+
+	_sprite = new sf::Sprite(); 
+	sf::Texture* tex = new sf::Texture(); 
+
+	tex->loadFromFile("C:/VSProjects/DegreeProject-C-/Avatar.PNG");
+	_sprite->setTexture(*tex, true);
+
+
 	//Any GameObjects created at start should be created before this loop in order to utilize their start function
 	for (Engine::GameObject* go : Engine::GameObject::GetInstances()) 
 	{
@@ -23,12 +30,11 @@ void Factorio::Start()
 	}	
 }
 
-void Factorio::Run()
-{
+void Factorio::Run() {
 	while (_window->isOpen())
 	{
 		sf::Event event;
-		while (_window->pollEvent(event))
+		while (_window->pollEvent(event)) 
 		{
 			if (event.type == sf::Event::Closed)
 				_window->close();
@@ -40,6 +46,11 @@ void Factorio::Run()
 		}
 
 		_window->clear();
+		_window->draw(*_sprite); 
+		for (Engine::GameObject* go : Engine::GameObject::GetInstances())
+		{
+			_window->draw(*go->_spriteRenderer->GetSprite()); 
+		}
 		_window->display();
 	}	
 }
