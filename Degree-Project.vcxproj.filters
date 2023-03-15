@@ -30,6 +30,12 @@
     <ClCompile Include="EntryPoint.cpp">
       <Filter>Source Files\Engine\Core</Filter>
     </ClCompile>
+    <ClCompile Include="SpriteRenderer.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="TestObject.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FactorioApp.h">
@@ -47,6 +53,14 @@
     <ClInclude Include="SpriteRenderer.h">
       <Filter>Source Files\Engine</Filter>
     </ClInclude>
+    <ClInclude Include="TestObject.h">
+      <Filter>Source Files\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Avatar.PNG">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Image Include="x64\Release\Unity-Emblem.png">

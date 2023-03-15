@@ -1,37 +1,18 @@
 #pragma once
+#include <iostream>
+#include <SFML/Graphics.hpp>
 
 namespace Engine {
 	class SpriteRenderer {
-
 	public:
-		SpriteRenderer()
-		{
-			_sprite = new sf::Sprite();
-		}
-		SpriteRenderer(std::string imgPath)
-		{
-			_sprite = new sf::Sprite(); 
-			sf::Texture* tex = new sf::Texture(); 
-			tex->loadFromFile(imgPath);
-			_sprite->setTexture(*tex, true);
-			delete tex; 
-		}
-		~SpriteRenderer()
-		{
-			delete _sprite; 
-		}
+		SpriteRenderer();
+		SpriteRenderer(std::string imgPath);
+		~SpriteRenderer();
 
-		void SetTexture(std::string imgPath)
-		{
-			sf::Texture* tex = new sf::Texture(); 
-			tex->loadFromFile(imgPath); 
-			_sprite->setTexture(*tex, true); 
-			delete tex; 
-		}
-
-		sf::Sprite* GetSprite() { return _sprite; }
+		void SetTexture(std::string imgPath);
+		sf::Sprite* GetSprite();
 
 	private: 
-		sf::Sprite* _sprite; 
+		sf::Sprite* _sprite = new sf::Sprite(); 
 	};
 }

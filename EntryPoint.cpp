@@ -1,7 +1,6 @@
 #include "Engine.h"
 
-int main()
-{
+int main() {
 	auto app = Engine::CreateApplication(); 
 
 	app->Start(); 

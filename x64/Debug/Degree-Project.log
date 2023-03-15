@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿  EntryPoint.cpp
   FactorioApp.cpp
   Generating Code...
   Degree-Project.vcxproj -> C:\VSProjects\Degree-Project\x64\Debug\Degree-Project.exe
+=======
+﻿  FactorioApp.cpp
+  Degree-Project.vcxproj -> C:\VSProjects\DegreeProject-C-\x64\Debug\Degree-Project.exe
+>>>>>>> 1a2d0f6c613db269b6aeadc8a4441660c4cd4b50
