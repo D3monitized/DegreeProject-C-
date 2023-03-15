@@ -13,10 +13,6 @@ namespace Engine {
 		{
 			_instances.insert(this);
 		}
-		GameObject(GameObject& other)
-		{
-			_instances.insert(this);
-		}
 		~GameObject()
 		{
 			_instances.erase(this);
@@ -24,6 +20,7 @@ namespace Engine {
 
 		virtual void Start() = 0;
 		virtual void Tick() = 0;
+		virtual void Draw(sf::RenderWindow& window) = 0; 
 
 		static const std::set<GameObject*>& GetInstances() { return _instances; }
 	};

@@ -89,6 +89,7 @@
     <ClInclude Include="FactorioApp.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="SpriteRenderer.h" />
+    <ClInclude Include="GameSprites.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EntryPoint.cpp" />

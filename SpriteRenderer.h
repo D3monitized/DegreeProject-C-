@@ -6,13 +6,14 @@ namespace Engine {
 	class SpriteRenderer {
 	public:
 		SpriteRenderer();
-		SpriteRenderer(std::string imgPath);
 		~SpriteRenderer();
 
 		void SetTexture(std::string imgPath);
-		sf::Sprite* GetSprite();
 
+		sf::Sprite& GetSprite() { return *_sprite; }
+		
 	private: 
-		sf::Sprite* _sprite = new sf::Sprite(); 
+		sf::Sprite* _sprite;
+		sf::Texture* _texture;
 	};
 }

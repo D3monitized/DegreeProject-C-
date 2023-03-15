@@ -1,26 +1,21 @@
 #include "SpriteRenderer.h"
 
 namespace Engine {
-	SpriteRenderer::SpriteRenderer() {		
+	SpriteRenderer::SpriteRenderer() 
+	{
+		_sprite = new sf::Sprite(); 
+		_texture = new sf::Texture(); 
 	}
 
-	SpriteRenderer::SpriteRenderer(std::string imgPath) {		
-		sf::Texture* tex = new sf::Texture();
-		tex->loadFromFile(imgPath);
-		_sprite->setTexture(*tex, true);
-		delete tex;
+	SpriteRenderer::~SpriteRenderer() 
+	{		
+		delete _sprite; 
+		delete _texture; 
 	}
 
-	SpriteRenderer::~SpriteRenderer() {
-		
+	void SpriteRenderer::SetTexture(std::string imgPath) 	
+	{
+		_texture->loadFromFile(imgPath); 
+		_sprite->setTexture(*_texture); 
 	}
-
-	void SpriteRenderer::SetTexture(std::string imgPath) {
-		sf::Texture* tex = new sf::Texture();
-		tex->loadFromFile(imgPath);
-		_sprite->setTexture(*tex, true);
-		delete tex;
-	}
-
-	sf::Sprite* SpriteRenderer::GetSprite() { return _sprite; }
 }

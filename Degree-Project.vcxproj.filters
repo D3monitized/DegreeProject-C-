@@ -39,6 +39,9 @@
     <ClInclude Include="FactorioApp.h">
       <Filter>Source Files\Game</Filter>
     </ClInclude>
+    <ClInclude Include="GameSprites.h">
+      <Filter>Source Files\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EntryPoint.cpp">
