@@ -1,19 +1,22 @@
 #pragma once
 
-namespace Engine 
-{
+namespace Engine {
 	class Application {
 
 	public:
-		Application() {
+		Application() 
+		{
 		}
-		~Application() {
+		~Application() 
+		{
 		}
 
-		virtual void Start() {
+		virtual void Start() 
+		{
 		}
 
-		virtual void Run() {
+		virtual void Run() 
+		{
 		}
 	};
 

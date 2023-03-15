@@ -1,8 +1,6 @@
 #pragma once
 #include "Engine.h"
-#include <SFML/Window.hpp>
-#include <SFML/Graphics.hpp>
-#include "TestObject.h"
+
 
 class Factorio : public Engine::Application {
 public:
@@ -14,9 +12,9 @@ public:
 
 private: 
 	sf::RenderWindow* _window; 
-	sf::Sprite* _sprite; 
 };
 
-Engine::Application* Engine::CreateApplication() {
-	return new Factorio(); 
+Engine::Application* Engine::CreateApplication()
+{
+	return new Factorio();
 }
