@@ -6,46 +6,6 @@
 std::set<Engine::GameObject*> Engine::GameObject::_instances;
 sf::Time DeltaTime;
 
-class TestObject : public Engine::GameObject {
-
-#include "GameSprites.h"
-
-public: 
-	TestObject()
-	{
-		_spriteRenderer = new Engine::SpriteRenderer(); 
-		_spriteRenderer->SetTexture(TEST_SPRITE); 
-
-		_transform = new Engine::Transform(); 
-	}
-	~TestObject()
-	{
-		delete _spriteRenderer; 
-		delete _transform; 
-	}
-
-	void Start() override
-	{
-
-	}
-
-	void Tick() override
-	{
-		_transform->_position += sf::Vector2f(1, 0) * DeltaTime.asSeconds(); 
-		_spriteRenderer->GetSprite().setPosition(_transform->_position); 
-	}
-
-	void Draw(sf::RenderWindow& _window) override
-	{
-		_window.draw(_spriteRenderer->GetSprite());
-	}
-
-private: 
-	Engine::SpriteRenderer* _spriteRenderer;
-	Engine::Transform* _transform; 
-};
-
-static TestObject* to = new TestObject();
 
 Factorio::Factorio() //Called when application is run
 {

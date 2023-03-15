@@ -1,1 +1,2 @@
 C:\VSProjects\Degree-Project\x64\Debug\Degree-Project.exe
+C:\VSProjects\DegreeProject-C-\x64\Debug\Degree-Project.exe
