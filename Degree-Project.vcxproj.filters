@@ -48,4 +48,9 @@
       <Filter>Source Files\Engine</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="x64\Release\Unity-Emblem.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

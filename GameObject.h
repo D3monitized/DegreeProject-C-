@@ -6,7 +6,7 @@ namespace Engine {
 	static std::set<GameObject*> _instances;
 
 	public:
-		GameObject()
+		GameObject() 
 		{
 			_instances.insert(this);
 		}
@@ -26,7 +26,7 @@ namespace Engine {
 
 		virtual void Tick()
 		{
-			
+			std::cout << _Name << std::endl; 
 		}
 
 		static const std::set<GameObject*>& GetInstances()
