@@ -90,6 +90,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="SpriteRenderer.h" />
     <ClInclude Include="GameSprites.h" />
+    <ClInclude Include="Transform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EntryPoint.cpp" />

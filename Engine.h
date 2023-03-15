@@ -11,3 +11,4 @@
 //Components and base classes
 #include "GameObject.h"
 #include "SpriteRenderer.h"
+#include "Transform.h"
