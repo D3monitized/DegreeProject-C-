@@ -3,7 +3,7 @@
 sf::RenderWindow* Window = new sf::RenderWindow(sf::VideoMode(600, 400), "Application Window");
 std::set<Engine::GameObject*> Engine::GameObject::_instances;
 
-sf::Time DeltaTime = sf::Time(); 
+sf::Time DeltaTime = sf::Time();  
 
 int main()
 {

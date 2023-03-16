@@ -1,6 +1,8 @@
 #include "FactorioApp.h"
 #include <chrono>
 
+//This is the main game file. From here we'll handle all game related logic
+
 extern sf::Time DeltaTime; 
 
 class TestObject : public Engine::GameObject {
@@ -15,7 +17,9 @@ public:
 
 	void Start() override
 	{
-		sprite.SetTexture(TEST_SPRITE);
+		spriteRenderer.SetTexture(TEST_SPRITE);
+		transform._scale = sf::Vector2f(.25f, .25f);
+		transform._position = sf::Vector2f(600 / 2, 400 / 2); 
 	}
 	void Tick() override
 	{
@@ -29,7 +33,6 @@ T* Spawn() { //Creates a new instance of an object and returns its address
 	return new T(); 
 }
 
-//This is the main game file. From here we'll handle all game related logic
 Factorio::Factorio() //Called when application is run
 {
 	 
@@ -42,7 +45,7 @@ Factorio::~Factorio() //Called when application is closed
 
 void Factorio::Start() //Called after application has opened up (before Factorio::Run)
 {
-	TestObject* ob = Spawn<TestObject>();
+	TestObject* to = Spawn<TestObject>(); 
 }
 
 void Factorio::Run() //Called every frame until application is closed

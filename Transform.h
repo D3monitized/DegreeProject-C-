@@ -6,7 +6,8 @@ namespace Engine {
 	public: 
 		Transform()
 		{
-
+			_position = sf::Vector2f(0, 0); 
+			_scale = sf::Vector2f(1, 1); 
 		}
 
 		~Transform()
