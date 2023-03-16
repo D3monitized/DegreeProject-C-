@@ -45,12 +45,11 @@ Factorio::~Factorio() //Called when application is closed
 
 void Factorio::Start() //Called after application has opened up (before Factorio::Run)
 {
-	TestObject* to = Spawn<TestObject>(); 
+	TestObject* to = Spawn<TestObject>(); 	
 }
 
 void Factorio::Run() //Called every frame until application is closed
 {
-	
 }
 
 void Factorio::OnClose() //Called after application is closed 

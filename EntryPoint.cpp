@@ -4,6 +4,7 @@ sf::RenderWindow* Window = new sf::RenderWindow(sf::VideoMode(600, 400), "Applic
 std::set<Engine::GameObject*> Engine::GameObject::_instances;
 
 sf::Time DeltaTime = sf::Time();  
+int FrameCount = 0; 
 
 int main()
 {
@@ -43,7 +44,11 @@ int main()
 		}
 		Window->display();
 
-		DeltaTime = deltaClock.restart(); 
+		DeltaTime = deltaClock.restart();
+		if (FrameCount + 1 == INT_MAX)
+			FrameCount = 0; 
+		else
+			FrameCount++; 
 	}
 
 	app->OnClose();
