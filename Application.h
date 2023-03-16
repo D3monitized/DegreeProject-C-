@@ -1,11 +1,10 @@
 #pragma once
 
 namespace Engine {
-	class Application {
-
+	class Application {	
 	public:
 		Application() 
-		{
+		{			
 		}
 		~Application() 
 		{
@@ -16,6 +15,10 @@ namespace Engine {
 		}
 
 		virtual void Run() 
+		{
+		}	
+
+		virtual void OnClose() 
 		{
 		}
 	};

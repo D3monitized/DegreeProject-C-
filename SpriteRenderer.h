@@ -8,10 +8,12 @@ namespace Engine {
 		SpriteRenderer();
 		~SpriteRenderer();
 
-		void UpdatePosition(sf::Vector2f position); 
 		void SetTexture(std::string imgPath);
+		void UpdatePosition(sf::Vector2f position); 
 
 		sf::Sprite& GetSprite() { return *_sprite; }
+
+
 		
 	private: 
 		sf::Sprite* _sprite;

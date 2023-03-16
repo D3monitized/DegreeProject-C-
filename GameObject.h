@@ -2,36 +2,49 @@
 #include <iostream>
 #include <set>
 
+#include "Transform.h"
 #include "SpriteRenderer.h"
 
 namespace Engine {
 
 	class GameObject { //Abstract class not to be used as is 		
+	#define transform GetTransform()
+	#define sprite GetSprite()
+
 	public:
 		GameObject()
 		{
-			_transform = new Transform(); 
+			_transform = new Transform();
 			_spriteRenderer = new SpriteRenderer();
 			_instances.insert(this);
 		}
 		~GameObject()
 		{
-			delete _transform; 
-			delete _spriteRenderer; 
+			delete _transform;
+			delete _spriteRenderer;
 			_instances.erase(this);
 		}
 
 		virtual void Start() = 0;
 		virtual void Tick() = 0;
-		virtual void Draw(sf::RenderWindow& window) = 0; 
-
+		
 		static const std::set<GameObject*>& GetInstances() { return _instances; }
 
-	public: 
-		SpriteRenderer* _spriteRenderer; 
-		Transform* _transform; 
+		
+		void Draw(sf::RenderWindow& window) //Not to be used in derived class
+		{
+			_spriteRenderer->UpdatePosition(_transform->_position);
+			window.draw(_spriteRenderer->GetSprite());
+		}
 
-	private: 
+	protected: 
+		Transform& GetTransform() { return *_transform; }
+		SpriteRenderer& GetSprite() { return *_spriteRenderer; }
+
+	private:
+		SpriteRenderer* _spriteRenderer;
+		Transform* _transform;
+
 		static std::set<GameObject*> _instances;
 
 	};

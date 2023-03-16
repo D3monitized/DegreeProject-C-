@@ -1,56 +1,56 @@
 #include "FactorioApp.h"
 #include <chrono>
 
+extern sf::Time DeltaTime; 
+
+class TestObject : public Engine::GameObject {
+#include "GameSprites.h"
+public: 
+	TestObject() 
+	{
+	}
+	~TestObject()
+	{
+	}
+
+	void Start() override
+	{
+		sprite.SetTexture(TEST_SPRITE);
+	}
+	void Tick() override
+	{
+		transform._position += sf::Vector2f(1, 0) * DeltaTime.asSeconds() * 5.f;
+	}
+
+};
+
+template <typename T>
+T* Spawn() { //Creates a new instance of an object and returns its address
+	return new T(); 
+}
+
 //This is the main game file. From here we'll handle all game related logic
-
-std::set<Engine::GameObject*> Engine::GameObject::_instances;
-sf::Time DeltaTime;
-
-
 Factorio::Factorio() //Called when application is run
 {
-	_window = new sf::RenderWindow(sf::VideoMode(400, 400), "Game Window");
+	 
 }
 
 Factorio::~Factorio() //Called when application is closed
 {
-	delete _window;
+	
 }
 
 void Factorio::Start() //Called after application has opened up (before Factorio::Run)
 {
-	//Any GameObjects created at start should be created before this loop in order to utilize their start function
-	for (Engine::GameObject* go : Engine::GameObject::GetInstances())
-	{
-		go->Start();
-	}
+	TestObject* ob = Spawn<TestObject>();
 }
 
-void Factorio::Run() //Called once when application has opened
+void Factorio::Run() //Called every frame until application is closed
 {
-	sf::Clock deltaClock; 
 	
-	while (_window->isOpen()) //Main gameplay loop
-	{
-		sf::Event event;
-		while (_window->pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-				_window->close();
-		}
+}
 
-		for (Engine::GameObject* go : Engine::GameObject::GetInstances())
-		{
-			go->Tick();
-		}
+void Factorio::OnClose() //Called after application is closed 
+{
 
-		_window->clear();
-		for (Engine::GameObject* go : Engine::GameObject::GetInstances())
-		{
-			go->Draw(*_window);
-		}
-		_window->display();
-	
-		DeltaTime = deltaClock.restart(); 
-	}
 }

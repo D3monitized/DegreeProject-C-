@@ -9,9 +9,7 @@ public:
 
 	void Start() override; 
 	void Run() override; 
-
-private: 
-	sf::RenderWindow* _window; 
+	void OnClose() override; 
 };
 
 Engine::Application* Engine::CreateApplication()
