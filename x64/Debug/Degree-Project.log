@@ -1,2 +1,45 @@
 ﻿  FactorioApp.cpp
-  Degree-Project.vcxproj -> C:\VSProjects\DegreeProject-C-\x64\Debug\Degree-Project.exe
+C:\VSProjects\DegreeProject-C-\Input.h(7,14): error C2065: 'InputKey': undeclared identifier
+C:\VSProjects\DegreeProject-C-\Input.h(7,7): error C2923: 'std::vector': 'InputKey' is not a valid template type argument for parameter '_Ty'
+C:\VSProjects\DegreeProject-C-\Input.h(7): message : see declaration of 'InputKey'
+C:\VSProjects\DegreeProject-C-\Input.h(7,7): error C2976: 'std::vector': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+C:\VSProjects\DegreeProject-C-\Input.h(7,48): error C2065: 'InputKey': undeclared identifier
+C:\VSProjects\DegreeProject-C-\Input.h(7,41): error C2923: 'std::vector': 'InputKey' is not a valid template type argument for parameter '_Ty'
+C:\VSProjects\DegreeProject-C-\Input.h(7): message : see declaration of 'InputKey'
+C:\VSProjects\DegreeProject-C-\Input.h(7,41): error C2976: 'std::vector': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+C:\VSProjects\DegreeProject-C-\Input.h(7,41): error C2955: 'std::vector': use of class template requires template argument list
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : see declaration of 'std::vector'
+C:\VSProjects\DegreeProject-C-\Input.h(7,34): error C2512: 'std::vector': no appropriate default constructor available
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443,1): message : see declaration of 'std::vector'
+C:\VSProjects\DegreeProject-C-\Input.h(27,41): error C2662: 'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type std::vector<_Ty,_Alloc>::size(void) noexcept const': cannot convert 'this' pointer from 'std::vector' to 'const std::vector<_Ty,_Alloc> &'
+C:\VSProjects\DegreeProject-C-\Input.h(27,41): message : Reason: cannot convert from 'std::vector' to 'const std::vector<_Ty,_Alloc>'
+C:\VSProjects\DegreeProject-C-\Input.h(27,26): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1547,49): message : see declaration of 'std::vector<_Ty,_Alloc>::size'
+C:\VSProjects\DegreeProject-C-\Input.h(29,7): error C2678: binary '[': no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1572,50): message : could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1562,44): message : or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+C:\VSProjects\DegreeProject-C-\Input.h(29,7): message : while trying to match the argument list '(std::vector, size_t)'
+C:\VSProjects\DegreeProject-C-\Input.h(31,8): error C2678: binary '[': no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1572,50): message : could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1562,44): message : or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+C:\VSProjects\DegreeProject-C-\Input.h(31,8): message : while trying to match the argument list '(std::vector, size_t)'
+C:\VSProjects\DegreeProject-C-\Input.h(33,17): error C2678: binary '[': no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1572,50): message : could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1562,44): message : or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+C:\VSProjects\DegreeProject-C-\Input.h(33,17): message : while trying to match the argument list '(std::vector, size_t)'
+C:\VSProjects\DegreeProject-C-\Input.h(36,14): warning C4551: function call missing argument list
+C:\VSProjects\DegreeProject-C-\Input.h(36,13): error C2678: binary '[': no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1572,50): message : could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1562,44): message : or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+C:\VSProjects\DegreeProject-C-\Input.h(36,13): message : while trying to match the argument list '(std::vector, size_t)'
+C:\VSProjects\DegreeProject-C-\Input.h(38,17): error C2678: binary '[': no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1572,50): message : could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1562,44): message : or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+C:\VSProjects\DegreeProject-C-\Input.h(38,17): message : while trying to match the argument list '(std::vector, size_t)'
+C:\VSProjects\DegreeProject-C-\Input.h(44,14): error C2663: 'std::vector<_Ty,_Alloc>::push_back': 2 overloads have no legal conversion for 'this' pointer
+C:\VSProjects\DegreeProject-C-\Input.h(45,30): error C2662: 'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type std::vector<_Ty,_Alloc>::size(void) noexcept const': cannot convert 'this' pointer from 'std::vector' to 'const std::vector<_Ty,_Alloc> &'
+C:\VSProjects\DegreeProject-C-\Input.h(45,30): message : Reason: cannot convert from 'std::vector' to 'const std::vector<_Ty,_Alloc>'
+C:\VSProjects\DegreeProject-C-\Input.h(45,15): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1547,49): message : see declaration of 'std::vector<_Ty,_Alloc>::size'

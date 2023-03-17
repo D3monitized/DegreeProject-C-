@@ -1,9 +1,5 @@
 #include "FactorioApp.h"
-#include "GameObject.h"
-#include "Input.h"
-#include <chrono>
-
-//This is the main game file. From here we'll handle all game related logic
+#include "Engine.h"
 
 extern sf::Time DeltaTime; 
 
@@ -31,33 +27,32 @@ public:
 };
 
 template <typename T>
-T* Spawn() { //Creates a new instance of an object and returns its address
+T* Spawn() { 
 	return new T(); 
 }
 
-Factorio::Factorio() //Called when application is run
+Factorio::Factorio() 
 {
 	 
 }
 
-Factorio::~Factorio() //Called when application is closed
+Factorio::~Factorio() 
 {
 	
 }
 
-void Factorio::Start() //Called after application has opened up (before Factorio::Run)
+void Factorio::Start() 
 {
-	TestObject* to = Spawn<TestObject>(); 	
+	TestObject* to = Spawn<TestObject>();
+
+	
 }
 
-void Factorio::Run() //Called every frame until application is closed
+void Factorio::Run()
 {
-	if (Engine::GetKeyDown(Keyboard_W))
-		std::cout << "W key" << std::endl; 
-
 }
 
-void Factorio::OnClose() //Called after application is closed 
+void Factorio::OnClose() 
 {
 
 }

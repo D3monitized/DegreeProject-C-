@@ -7,6 +7,7 @@
 
 //Core 
 #include "Application.h"
+#include "Input.h"
 
 //Components and base classes
 #include "GameObject.h"
