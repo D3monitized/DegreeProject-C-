@@ -88,6 +88,7 @@
     <ClInclude Include="Engine.h" />
     <ClInclude Include="FactorioApp.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Input.h" />
     <ClInclude Include="SpriteRenderer.h" />
     <ClInclude Include="GameSprites.h" />
     <ClInclude Include="Transform.h" />
